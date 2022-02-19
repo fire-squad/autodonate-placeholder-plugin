@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+{% spaceless %}
+<html lang="ru_RU">
+   <head>
+      <meta charset="UTF-8">
+      <title>Autodonate example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <link rel="stylesheet" href="{% static 'placeholder/bulma.min.css' %}">
+      <link rel="shortcut icon" href="{% static 'placeholder/favicon.ico' %}">
+      <meta property="og:type" content="website"/>
+      <meta property="og:locale" content="ru_RU">
+      <meta property="og:site_name" content="alfis viewer">
+      <meta property="og:title" content="Autodonate example" />
+      <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+      <meta property="og:description" content="Example plugin for Autodonate">
+   </head>
+   <body>
+       <section class="section">
+           <div class="tabs is-boxed">
+               <ul>
+                   <li class="is-active">
+                       <a href="#">
+                           <span>Главная</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="{% url 'admin:login' %}">
+                           <span>Админка</span>
+                       </a>
+                   </li>
+                   <li>
+                       <a href="https://autodonate.firesquare.ru/en/latest/">
+                           <span>Документация</span>
+                       </a>
+                   </li>
+               </ul>
+           </div>
+           <div class="container">
+               <h1 class="title">
+                   Привет!
+               </h1>
+               <p class="subtitle">
+                   Это плагин-заглушка для <strong>Autodonate</strong>.
+               </p>
+           </div>
+       </section>
+   </body>
+</html>
+
+{% endspaceless %}
